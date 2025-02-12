@@ -9,7 +9,7 @@ The original repo is here: https://github.com/akveo/ngx-admin
 npx playwright test
 npx playwright show-report
 
-npx playwright test --project=chromium --headed // specific browser
+npx playwright test --project=chromium --headed // specific browser and modo assistido, por padrão executa em background
 npx playwright test example.spec.ts --project=chromium // specific file test
 
 npx playwright test -g "has title" --project=chromium // specific test name
