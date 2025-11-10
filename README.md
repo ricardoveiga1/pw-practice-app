@@ -4,33 +4,32 @@ This is modified and more lightweight version of original application to practic
 
 The original repo is here: https://github.com/akveo/ngx-admin
 
-### Comandos 12/02/2025
+
+### Comandos 08/11/2025
 
 npx playwright test
 npx playwright show-report
 
-npx playwright test --project=chromium --headed // specific browser and modo assistido, por padrão executa em background
-npx playwright test example.spec.ts --project=chromium // specific file test
+npx playwright test --project=chromium // executa teste em background
 
-npx playwright test -g "has title" --project=chromium // specific test name
+npx playwright test --project=chromium --headed // browser específico em modo assistido, por padrão 
+npx playwright test example.spec.ts --project=chromium // teste específico
+npx playwright test example.spec.ts --project=chromium --headed // teste específico em modo assistido
 
-// podemos usar .skip e .only para esclher apenas um teste a executar  test.only ou .skip('has title', async ({ page }) => {
+npx playwright test -g "has title" --project=chromium // nome do teste específico
+npx playwright test -g "has title" --project=chromium --headed // nome do teste específico
+
+// podemos usar .skip .only para escolher apenas um teste a executar  test.only ou .skip('has title', async ({ page }) => {
 
 
 npx playwright test --ui // open de UI test
 
 npx playwright test --project=chromium --trace on   // DEBUG test
 
-npx playwright test --project=chromium --debug
+npx playwright test --project=chromium --debug // visualiza o inspector do playwright, consegue ver o passo a passo do teste, next next next
+
+// podemos executar em modo debug, basta por breakpoint
 
 
-//Install playwright
+// LOCATORS - https://playwright.dev/docs/other-locators
 
-npm init playwrith@latest --force
-
-Getting started with writing end-to-end tests with Playwright:
-Initializing project in '.'
-✔ Where to put your end-to-end tests? · tests
-✔ Add a GitHub Actions workflow? (y/N) · false
-✔ Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) · true
-Installing Playwright Test (npm install --save-dev @playwright/test)…
