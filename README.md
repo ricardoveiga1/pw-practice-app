@@ -33,3 +33,5 @@ npx playwright test --project=chromium --debug // visualiza o inspector do playw
 
 // LOCATORS - https://playwright.dev/docs/other-locators
 
+// Auto-waiting of elements from playwright - https://playwright.dev/docs/actionability   /  http://www.uitestingplayground.com/ajax
+// definimos algumas configs padrão no arquivo playwright.config.ts - timeout é uma delas
